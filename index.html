@@ -6,140 +6,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Technical Documentation</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        nav {
-            display: block;
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 250px;
-        }
-        #navs {
-            list-style-type: none;
-        }
-        #main-doc {
-            margin-left: 260px;
-        }
-        @media (max-width: 780px){
-            nav {
-                width: 100%;
-                top: 0;
-                left: 0;
-                right: 0;
-                height: 50px;
-                display: block;
-                position: absolute;
-                background-color: white;
-            }
-            #navs {
-                background-color: white;
-            }
-            #navs li {
-                display: inline-flex;
-            }
-            #main-doc {
-                margin: 100px 10px 10px 10px;
+        @media (max-width: 700px) {
+            code {
+                white-space: pre-wrap;
             }
         }
     </style>
 </head>
 
 <body>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <nav id="navbar">
-        <header>HTML Basics</header>
-        <ul id="navs">
-            <li><a class="nav-link" href="#The_DOCTYPE_Declaration">The DOCTYPE Declaration</a></li>
-            <li><a class="nav-link" href="#HTML_headers">HTML headers</a></li>
-            <li><a class="nav-link" href="#HTML_Paragraphs">HTML Paragraphs</a></li>
-            <li><a class="nav-link" href="#HTML_Links">HTML Links</a></li>
-            <li><a class="nav-link" href="#HTML_Images">HTML Images</a></li>
-        </ul>
-        
+    <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+        <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey w3-right"
+            onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+    </div>
+    <nav id="navbar" class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;"><br>
+        <div class="w3-container">
+            <header>
+                <h5>HTML Basics</h5>
+            </header>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
+                onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+            <a class="w3-bar-item w3-button w3-padding nav-link" href="#The_DOCTYPE_Declaration">The DOCTYPE
+                Declaration</a>
+            <a class="w3-bar-item w3-button w3-padding nav-link" href="#HTML_headers">HTML headers</a>
+            <a class="w3-bar-item w3-button w3-padding nav-link" href="#HTML_Paragraphs">HTML Paragraphs</a>
+            <a class="w3-bar-item w3-button w3-padding nav-link" href="#HTML_Links">HTML Links</a>
+            <a class="w3-bar-item w3-button w3-padding nav-link" href="#HTML_Images">HTML Images</a>
+        </div>
     </nav>
-    <main id="main-doc">
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <main id="main-doc" class="w3-main" style="margin-left:300px;margin-top:43px;">
         <section class="main-section" id="The_DOCTYPE_Declaration">
-            <header>The DOCTYPE Declaration</header>
-            <p>
+            <header><h3>The DOCTYPE Declaration</h3></header>
+            <p>Doctype is the first thing</p>
             <ul>
                 <li>The &lt;!DOCTYPE&gt; declaration represents the document type, and helps browsers to display web
                     pages correctly.</li>
                 <li>It must only appear once, at the top of the page (before any HTML tags).</li>
                 <li>The &lt;!DOCTYPE&gt; declaration is not case sensitive.</li>
-                </p>
             </ul>
-            <p>The &lt;!DOCTYPE&gt; declaration for HTML5 is:
-                <code>
-                    <pre>
-    &lt;!DOCTYPE html&gt;
-                    </pre>
-                </code>
-            </p>
+
+            <p>The &lt;!DOCTYPE&gt; declaration for HTML5 is:</p>
+            <code>
+    &lt;!DOCTYPE html&gt;<br>
+            </code>
         </section>
         <section class="main-section" id="HTML_headers">
-            <header>HTML headers</header>
+            <header><h3>HTML headers</h3></header>
             <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags.</p>
             <p>
                 &lt;h1&gt; defines the most important heading. &lt;h6&gt; defines the least important heading:
 
                 Example:
-                <code>
-                    <pre>
-    &lt;h1&gt;This is heading 1&lt;/h1&gt;
-    &lt;h2&gt;This is heading 2&lt;/h2&gt;
-    &lt;h3&gt;This is heading 3&lt;/h3&gt;
-                    </pre>
+                <code><br>
+    &lt;h1&gt;This is heading 1&lt;/h1&gt;<br>
+    &lt;h2&gt;This is heading 2&lt;/h2&gt;<br>
+    &lt;h3&gt;This is heading 3&lt;/h3&gt;<br>
                 </code>
             </p>
         </section>
         <section class="main-section" id="HTML_Paragraphs">
-            <header>HTML Paragraphs</header>
+            <header><h3>HTML Paragraphs</h3></header>
             <p>
                 HTML paragraphs are defined with the &lt;p&gt; tag:
             </p>
             <p>
                 <code>
-                    <pre>
-    &lt;p&gt;This is a paragraph.&lt;/p&gt;
-    &lt;p&gt;This is another paragraph.&lt;/p&gt;
-                    </pre>
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;<br>
+    &lt;p&gt;This is another paragraph.&lt;/p&gt;<br>
                 </code>
             </p>
         </section>
         <section class="main-section" id="HTML_Links">
-            <header>HTML Links</header>
+            <header><h3>HTML Links</h3></header>
             <p>
                 HTML links are defined with the &lt;a&gt; tag:
                 <code>
-                    <pre>
-    &lt;a href="https://www.w3schools.com"&gt;This is a link&lt;/a&gt;
-                    </pre>
+    &lt;a href="https://www.w3schools.com"&gt;This is a link&lt;/a&gt;<br>
                 </code>
             </p>
-            <p>
-                <ul>
-                    <li>The link's destination is specified in the href attribute.</li>
-                    <li>Attributes are used to provide additional information about HTML elements.</li>
-                    <li>You will learn more about attributes in a later chapter.</li>
-                </ul>
-            </p>
+            <p>The link appears on page like this: <a href="https://www.w3schools.com">This is a link</a></p>
+            <ul>
+                <li>The link's destination is specified in the href attribute.</li>
+                <li>Attributes are used to provide additional information about HTML elements.</li>
+                <li>You will learn more about attributes in a later chapter.</li>
+            </ul>
         </section>
         <section class="main-section" id="HTML_Images">
-            <header>HTML Images</header>
+            <header><h3>HTML Images</h3></header>
             <p>
-                HTML images are defined with the &lt;img&gt; tag. The source file (src), alternative text (alt), width,
+                HTML images are defined with the &lt;img&gt; tag. The source file (src), alternative text (alt),
+                width,
                 and height are provided as attributes:
             </p>
             <p>
                 <code>
-                    <pre>
-    &lt;img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"&gt;
-                    </pre>
+    &lt;img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"&gt;<br>
                 </code>
             </p>
         </section>
     </main>
     <script src="./tests.js"></script>
+    <script>
+        'use strict';
+        const navbar = document.getElementById("navbar");
+        const overlayBg = document.getElementById("myOverlay");
+        const w3_open = () => {
+            if (navbar.style.display === 'block') {
+                navbar.style.display = 'none';
+                overlayBg.style.display = "none";
+            } else {
+                navbar.style.display = 'block';
+                overlayBg.style.display = "block";
+            }
+        }
+        const w3_close = () => {
+            navbar.style.display = "none";
+            overlayBg.style.display = "none";
+        }
+    </script>
 </body>
 
 </html>
